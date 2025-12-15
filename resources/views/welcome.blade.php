@@ -10,38 +10,69 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        body, html {
+        html, body {
             height: 100%;
             margin: 0;
         }
 
-        .bg-cover {
-            background: url('{{ asset('images/bg.jpg') }}') center center / cover no-repeat;
-            height: 100vh;
+        /* Hero container */
+        .hero {
             position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
         }
 
-        .bg-overlay {
+        /* Background image (NO BLUR on mobile) */
+        .hero img {
             position: absolute;
             inset: 0;
-            background: rgba(0, 0, 0, 0.55); /* dim effect */
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
         }
 
-        .content-center {
+        /* Dark overlay */
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+        }
+
+        /* Centered content */
+        .hero-content {
             position: relative;
-            z-index: 1;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* Responsive text */
+        .hero-content h3 {
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-size: clamp(1.4rem, 4vw, 2.2rem);
         }
     </style>
 </head>
 <body>
 
-    <div class="bg-cover d-flex align-items-center justify-content-center text-center">
-        <div class="bg-overlay"></div>
+    <div class="hero">
+        <!-- High-resolution image -->
+        <img src="{{ asset('images/bg.jpg') }}" alt="Background">
 
-        <div class="content-center px-3">
-            <h3 class="text-white fw-bold">
-                Provincial Population Office
-            </h3>
+        <!-- Dim overlay -->
+        <div class="overlay"></div>
+
+        <!-- Centered text -->
+        <div class="hero-content">
+            <h3>Provincial Population Office</h3>
         </div>
     </div>
 
