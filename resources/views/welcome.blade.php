@@ -69,7 +69,7 @@
         <!-- H3 at TOP -->
         <div class="content-top">
             <h3 class="mb-0 p-0">Provincial Population Office</h3>
-            <h3 class="mt-1 p-0 text-light" style="font-weight: 400">( P P O )</h3>
+            <h3 class="mt-1 p-0 text-warning" style="font-weight: 400">( P P O )</h3>
             <h6 class="mt-2 p-0 text-light" style="font-weight: 400">Carles, Iloilo 5019</h6>
         </div>
     </div>
