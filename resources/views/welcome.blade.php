@@ -65,7 +65,7 @@
 
     <div class="hero">
         <!-- High-resolution image -->
-        <img src="{{ asset('images/bg.jpg') }}" alt="Background">
+        <img src="{{ asset('images/fav.png') }}" alt="Background">
 
         <!-- Dim overlay -->
         <div class="overlay"></div>
