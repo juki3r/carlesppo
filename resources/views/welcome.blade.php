@@ -22,41 +22,39 @@
             overflow: hidden;
         }
 
-        /* Sharp image (NO BLUR) */
+        /* Sharp background image */
         .sec img {
             position: absolute;
             inset: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;   /* important */
+            object-fit: cover;
             object-position: center;
         }
 
-        /* Dim overlay */
+        /* Dark overlay */
         .dimmer {
             position: absolute;
             inset: 0;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.7);
             z-index: 1;
         }
 
-        /* Centered text */
-        .content {
+        /* Top content container */
+        .content-top {
             position: relative;
             z-index: 2;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 100%;
+            padding: 1.2rem;
             text-align: center;
-            padding: 1rem;
         }
 
-        .content h3 {
+        .content-top h3 {
             color: #fff;
             font-weight: 700;
-            font-size: clamp(1.4rem, 4vw, 2.3rem);
+            font-size: clamp(1.3rem, 4vw, 2.2rem);
             letter-spacing: 1px;
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -68,7 +66,8 @@
 
         <div class="dimmer"></div>
 
-        <div class="content">
+        <!-- H3 at TOP -->
+        <div class="content-top">
             <h3>Provincial Population Office</h3>
         </div>
     </div>
