@@ -18,7 +18,7 @@
     }
 </style>
 <body>
-   <div class="container h-100">
+   <div class="container-fluid h-100 p-0">
         <img src="{{ asset('images/bg.jpg') }}" alt="" width="100%" height="100%">
    </div>
 </body>
