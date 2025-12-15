@@ -36,7 +36,7 @@
         .dimmer {
             position: absolute;
             inset: 0;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.8);
             z-index: 1;
         }
 
@@ -68,7 +68,8 @@
 
         <!-- H3 at TOP -->
         <div class="content-top">
-            <h3>Provincial Population Office</h3>
+            <h3 class="mb-0 p-0">Provincial Population Office</h3>
+            <h6 class="mt-2 p-0 text-light" style="font-weight: 400">Carles, Iloilo 5019</h6>
         </div>
     </div>
 
