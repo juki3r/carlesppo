@@ -37,8 +37,10 @@ class RegisteredUserController extends Controller
 
         $user = User::create([
             'name' => $request->name,
-            'email' => $request->email,
+            'mobile' => $request->mobile,
             'password' => Hash::make($request->password),
+            'role' => 'user',
+            'api_key' => bin2hex(random_bytes(32)), // generate unique API key
         ]);
 
         event(new Registered($user));

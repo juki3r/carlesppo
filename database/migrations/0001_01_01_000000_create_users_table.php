@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('email')->unique()->nullable();;
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('role')->default('user'); // role column
+            $table->string('api_key', 64)->unique(); // API key column
             $table->rememberToken();
             $table->timestamps();
         });
