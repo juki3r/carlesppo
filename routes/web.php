@@ -8,6 +8,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::get('/login_web', [LoginController::class, 'showLoginForm'])->name('login');
 
 require __DIR__ . '/auth.php';
