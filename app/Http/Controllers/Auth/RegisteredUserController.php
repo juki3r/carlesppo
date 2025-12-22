@@ -31,13 +31,13 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
+            'username' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
         $user = User::create([
             'name' => $request->name,
-            'mobile' => $request->mobile,
+            'username' => $request->username,
             'password' => Hash::make($request->password),
             'role' => 'user',
             'api_key' => bin2hex(random_bytes(32)), // generate unique API key
